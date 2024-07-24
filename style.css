@@ -1,0 +1,184 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+
+}
+
+header {
+    background: #1e1e1e;
+    padding: 1rem 0;
+    color: #fff;
+    position: sticky;
+    top: 0; /* Stick to the top */
+    z-index: 1000; 
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Center the nav items */
+    align-items: center;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between; /* Center the nav content */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Set a max-width for larger screens */
+    padding: 0 2rem;
+}
+
+nav h1 {
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: auto; /* Push the nav items to the right */
+    gap: 3rem; 
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+.project {
+    background: #1e1e1e;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+a {
+    color: #bb86fc;
+}
+/* New Intro Section Styles */
+.intro {
+    background: url('images/bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+}
+
+.intro-content {
+    display: inline-block;
+    padding: 2rem;
+    border-radius: 8px;
+    padding: 4rem 2rem;
+    margin-top : 12%;
+    margin-bottom: 12%;
+}
+
+.intro h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.intro p {
+    font-size: 1.5rem;
+}
+footer {
+    background: #1e1e1e;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    nav .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Existing styles remain unchanged */
+
+/* New Skills Section Styles */
+#skills {
+    background-color: #1e1e1e;
+    padding: 4rem 2rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem; /* Space between grid items */
+}
+
+.skill-item {
+    text-align: center;
+}
+
+.skill-item img {
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto 0.5rem; /* Center the image and add space below */
+}
+
+.skill-item p {
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* Responsive Styles for Skills Grid */
+@media (max-width: 1200px) {
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
