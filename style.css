@@ -10,7 +10,6 @@ body {
     background-color: #121212;
     color: #e0e0e0;
     line-height: 1.6;
-
 }
 
 header {
@@ -77,7 +76,36 @@ h2 {
     padding: 1rem;
     border-radius: 5px;
 }
+#name {
+    font-size: 3rem;
+    margin: 0;
+}
 
+#role {
+    font-size: 1.5rem;
+    margin: 0;
+}
+.typewriter {
+    display: inline-block;
+    overflow: hidden; /* Ensures the text is hidden while animating */
+    border-right: .15em solid #fff; /* The cursor */
+    white-space: nowrap;
+    margin: 0 auto; /* Centers the text */
+    letter-spacing: .15em; /* Spacing between characters */
+    animation: typing 2.5s steps(40, end), blink-caret .75s step-end infinite;
+    font-family: 'Cursive', 'Comic Sans MS', 'Brush Script MT', sans-serif;
+}
+
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #fff; }
+}
 a {
     color: #bb86fc;
 }
@@ -100,6 +128,8 @@ a {
 .intro h2 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
+    font-family: 'Cursive', 'Comic Sans MS', 'Brush Script MT', sans-serif;
+
 }
 
 .intro p {
@@ -134,18 +164,38 @@ footer {
 #skills {
     background-color: #1e1e1e;
     padding: 4rem 2rem;
+    
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 2rem; /* Space between grid items */
 }
 
 .skill-item {
     text-align: center;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Slightly move down */
+    animation: fadeInUp 1s forwards; /* Apply animation */
 }
+.skill-item:nth-child(1) { animation-delay: 0s; }
+.skill-item:nth-child(2) { animation-delay: 0.1s; }
+.skill-item:nth-child(3) { animation-delay: 0.2s; }
+.skill-item:nth-child(4) { animation-delay: 0.3s; }
+.skill-item:nth-child(5) { animation-delay: 0.4s; }
+.skill-item:nth-child(6) { animation-delay: 0.5s; }
+.skill-item:nth-child(7) { animation-delay: 0.6s; }
+.skill-item:nth-child(8) { animation-delay: 0.7s; }
+.skill-item:nth-child(9) { animation-delay: 0.8s; }
+.skill-item:nth-child(10) { animation-delay: 0.9s; }
 
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .skill-item img {
     width: 80px; /* Adjust size as needed */
     height: auto;
@@ -157,6 +207,7 @@ footer {
     color: #fff;
     font-size: 1rem;
 }
+
 
 /* Responsive Styles for Skills Grid */
 @media (max-width: 1200px) {
@@ -180,5 +231,86 @@ footer {
 @media (max-width: 400px) {
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Style for the experience section */
+#experience {
+    background: #1e1e1e;;
+    padding: 4rem 0;
+    position: relative;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    padding: 1rem;
+    background: #36454F;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    width: 45%;
+    margin-bottom: 2rem; /* Space between items */
+    clear: both; /* Ensure items clear each other */
+}
+
+.timeline-item.left {
+    float: left;
+    margin-right: 10%;
+}
+
+.timeline-item.right {
+    float: right;
+    margin-left: 10%;
+}
+
+.timeline-item h3 {
+    margin-top: 0;
+}
+
+.timeline-date {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+.hidden p{
+    color: black;
+}
+/* Clearfix to prevent overflow issues */
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        float: none;
+        width: 100%;
+        margin: 0 auto 2rem auto;
+    }
+
+    .timeline:before {
+        display: none;
     }
 }
