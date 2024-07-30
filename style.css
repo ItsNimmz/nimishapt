@@ -314,3 +314,50 @@ footer {
         display: none;
     }
 }
+
+
+#about {
+    padding: 2rem 0;
+}
+
+#about .card {
+    background-color: #333;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#about .card-img-top {
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid #fff;
+}
+
+#about .card-title,
+#about .card-text {
+    color: #e0e0e0;
+}
+
+
+.icon-cog {
+    color: white;
+  }
+
+
+  #about .btn-link {
+    margin: 0.5rem;
+    display: inline-flex; /* Use inline-flex to make the button size adjust to its content */
+    align-items: center;
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    background-color: #fff; /* White background for the icon */
+    border-radius: 50%; /* Make the background circular */
+    line-height: 40px; /* Center the icon vertically */
+    text-align: center; /* Center the icon horizontally */
+    text-decoration: none; /* Remove underline */
+    color: #905a5a;
+}
+
+.card-body{
+    height: 0.75rem !important;
+}
+
