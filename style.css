@@ -263,7 +263,7 @@ footer {
 .timeline-item {
     position: relative;
     padding: 1rem;
-    background: #36454F;
+    background: #3b3539;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
@@ -425,4 +425,23 @@ footer {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 
+}
+
+.com-url {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent element */
+    font-weight: normal; /* Remove bold text */
+    border: none; /* Remove borders if any */
+    background: none; /* Remove background if any */
+}
+
+
+.timeline-item a:hover,
+.timeline-item a:focus,
+.timeline-item a:active {
+    text-decoration: none; /* Remove underline on hover/focus/active */
+    color: inherit; /* Inherit color on hover/focus/active */
+    font-weight: normal; /* Maintain normal font weight */
+    border: none; /* Remove borders on hover/focus/active */
+    background: none; /* Remove background on hover/focus/active */
 }
