@@ -7,12 +7,39 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.onkeydown = function(e) {
+            if (e.ctrlKey && 
+                (e.keyCode === 67 || 
+                e.keyCode === 86 || 
+                e.keyCode === 85 || 
+                e.keyCode === 117)) {
+                return false;
+            } else {
+                return true;
+            }
+    };
+    $(document).keypress("u",function(e) {
+    if(e.ctrlKey)
+    {
+    return false;
+    }
+    else
+    {
+    return true;
+    }
+    });
+    </script>
 </head>
 <body>
     <header>
         <nav>
             <div class="container">
-                <h1> &lt; /&gt;</h1>
+                <a href="#home" style="text-decoration: none;color: white;">                
+                    <h1> &lt; /&gt;</h1>
+                </a></li>
                 <ul>
                     <li><a href="#about">&lt; / About &gt;</a></li>
                     <li><a href="#skills">&lt; / Skills &gt;</a></li>
@@ -23,7 +50,7 @@
             </div>
         </nav>
     </header>
-    <section class="intro">
+    <section class="intro" id="home">
         <div class="intro-content">
             <div class="">
                 <h2 id="typewriter-text"> Hello</h2>
