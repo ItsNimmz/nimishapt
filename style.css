@@ -271,6 +271,7 @@ footer {
     width: 45%;
     margin-bottom: 2rem; /* Space between items */
     clear: both; /* Ensure items clear each other */
+    border-radius: 8px;
 }
 
 .timeline-item.left {
