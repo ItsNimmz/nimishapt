@@ -191,6 +191,10 @@ footer {
 .skill-item:nth-child(9) { animation-delay: 0.8s; }
 .skill-item:nth-child(10) { animation-delay: 0.9s; }
 
+.skill-item:hover {
+    transform: translate(10px, -10px); /* Move 10px right and 10px up */
+}
+
 @keyframes fadeInUp {
     to {
         opacity: 1;
@@ -446,4 +450,63 @@ footer {
     font-weight: normal; /* Maintain normal font weight */
     border: none; /* Remove borders on hover/focus/active */
     background: none; /* Remove background on hover/focus/active */
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+    
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #43474e;
+}
+
+.success-message {
+    margin-top: 15px;
+    color: #28a745;
+}
+.contact-info {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+.send-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px; /* Rounded sides */
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    cursor: pointer;
+}
+
+.send-btn:hover {
+    background-color: #555; /* Darker shade on hover */
 }

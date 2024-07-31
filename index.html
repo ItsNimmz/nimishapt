@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIMISHA P T - Portfolio</title>
+    <link rel="icon" type="image/jpg" href="images/thumb.jpg" />
+    <title>NIMISHA P T</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
-    document.addEventListener('contextmenu', event => event.preventDefault());
+    // document.addEventListener('contextmenu', event => event.preventDefault());
     document.onkeydown = function(e) {
             if (e.ctrlKey && 
                 (e.keyCode === 67 || 
@@ -31,6 +32,30 @@
     return true;
     }
     });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const form = document.getElementById('contact-form');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent form from submitting normally
+
+                // Clear the form
+                form.reset();
+
+                // Display success message
+                const successMessage = document.createElement('p');
+                successMessage.className = 'success-message';
+                successMessage.innerText = 'Thanks for getting in touch!';
+
+                // Append the success message to the form
+                form.appendChild(successMessage);
+
+                // Remove the success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.remove();
+                }, 5000);
+            });
+        });
     </script>
 </head>
 <body>
@@ -78,7 +103,7 @@
                 </div>
                 <div class="col-md-9" style="padding-top: 5%;">
                     <p>Hi, I'm Nimisha, an AI enthusiast with a background in software engineering. 
-                    I'm currently in the final semester of the Artificial Intelligence Design and Implementation (AIDI) program at Durham College and have nearly four years of experience as a Senior Software Engineer.
+                    I'm currently in the final semester of the Artificial Intelligence Design and Implementation (AIDI) program at Durham College and have nearly four years of experience as a Software Engineer.
                     </p>
                     <p>With a passion for leveraging technology to solve real-world problems, I have developed a diverse skill set in various programming languages and frameworks. I am keen on continuing my journey in AI and making meaningful contributions to the field.</p>
                 </div>
@@ -151,32 +176,32 @@
             <h2>Projects</h2>
             <div class="project">
                 <div class="project-description">
-                    <h3>Music Recommender App</h3>
-                    <p>Developed a model to recommend music based on user preferences.</p>
+                    <h3>AQI Prediction App</h3>
+                    <p>Developed a system to predict the future AQI value of a specific geographic location based on post AQI values.</p>
                 </div>
                 <div class="tech-used">
                     <div class="tech-bar">
                         <div class="tech-label">Technologies Used</div>
                         <div class="tech-progress">
                             <div class="tech-segment first" style="width: 50%; background-color: #3572A5 ;">Python</div>
-                            <div class="tech-segment" style="width: 30%; background-color: #F7DF1E;">React</div>
-                            <div class="tech-segment last" style="width: 20%; background-color: #e34c26;">SQL</div>
+                            <div class="tech-segment" style="width: 40%; background-color: #F7DF1E;">Flask API</div>
+                            <div class="tech-segment last" style="width: 10%; background-color: #e34c26;">C#</div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="project">
                 <div class="project-description">
-                    <h3>Fish Market Prediction</h3>
+                    <h3>Fish Species Prediction</h3>
                     <p>Built a classification model to predict fish species based on physical measurements.</p>
                 </div>
                 <div class="tech-used">
                     <div class="tech-bar">
                         <div class="tech-label">Technologies Used</div>
                         <div class="tech-progress">
-                            <div class="tech-segment first" style="width: 50%; background-color: #306998;">Python</div>
-                            <div class="tech-segment" style="width: 30%; background-color: #61DBFB;">React</div>
-                            <div class="tech-segment last" style="width: 20%; background-color: #F7DF1E;">SQL</div>
+                            <div class="tech-segment first" style="width: 60%; background-color: #306998;">Python</div>
+                            <div class="tech-segment" style="width: 26%; background-color: #e34c26;">HTML</div>
+                            <div class="tech-segment last" style="width: 14%; background-color: #563d7c;">CSS</div>
                         </div>
                     </div>
                 </div>
@@ -238,12 +263,37 @@
         </div>
     </div>
 </section>
-    <section id="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p>Feel free to reach out via <a href="mailto:nimisha@example.com">email</a> or connect with me on <a href="https://www.linkedin.com/in/nimisha-pt/" target="_blank">LinkedIn</a>.</p>
+<section id="contact" class="dark-bg">
+    <div class="container">
+        <h2><i class="fas fa-envelope"></i> Get in Touch</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="firstname" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="send-btn">Send Message</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> nimishanimms@gmail.com</p>
+                    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/nimisha-pt/" target="_blank">LinkedIn</a></p>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/ItsNimmz"" target="_blank">GitHub</a></p>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <footer>
         <div class="container">
