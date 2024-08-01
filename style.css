@@ -44,7 +44,7 @@ nav ul {
     list-style: none;
     display: flex;
     margin-left: auto; /* Push the nav items to the right */
-    gap: 3rem; 
+    gap: 2rem; 
 }
 
 nav ul li {
@@ -498,4 +498,37 @@ footer {
 
 .send-btn:hover {
     background-color: #555; /* Darker shade on hover */
+}
+
+.education-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.education-item {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.education-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.education-item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+}
+.education-item p {
+    margin: 5px 0;
+}
+@media (max-width: 768px) {
+    .education-item {
+        width: 100%;
+    }
 }
